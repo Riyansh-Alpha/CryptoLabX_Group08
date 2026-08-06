@@ -1,0 +1,9 @@
+# CryptoLabX - Requirements
+# Week 1: No external dependencies required.
+# All modules used (os, datetime, collections) are from the Python Standard Library.
+
+# -------------------------------------------------------
+# Planned dependencies for future weeks (do not install yet):
+# -------------------------------------------------------
+# pycryptodome>=3.20.0   # Modern cryptographic algorithms (AES, DES, RSA)
+# numpy>=1.26.0          # Matrix operations for Hill Cipher
