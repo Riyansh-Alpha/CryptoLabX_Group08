@@ -1,0 +1,1 @@
+Cryptography protects information from unauthorized access.

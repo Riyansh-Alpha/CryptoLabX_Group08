@@ -1,48 +1,46 @@
-import os
 from utils.file_analysis import analyze_file
-from utils.logger import write_log
+from utils.logger import log_menu
 
+MENU = """
+========== CryptoLabX ==========
+1. Encrypt
+2. Decrypt
+3. Attack
+4. Analyze Dataset
+5. Exit
+================================
+"""
 
-def display_menu():
-    print("\n===== CryptoLabX =====")
-    print("1. Encrypt")
-    print("2. Decrypt")
-    print("3. Attack")
-    print("4. Analyze File")
-    print("5. Exit")
+def main():
 
+    while True:
+        print(MENU)
+        choice = input("Enter your choice: ")
 
-while True:
+        if choice == "1":
+            log_menu("Encrypt")
+            print("\nComing Soon...\n")
 
-    display_menu()
+        elif choice == "2":
+            log_menu("Decrypt")
+            print("\nComing Soon...\n")
 
-    choice = input("Select an option: ")
+        elif choice == "3":
+            log_menu("Attack")
+            print("\nComing Soon...\n")
 
-    if choice == "1":
-        print("\nEncrypt Module Coming Soon")
-        write_log("Encrypt")
+        elif choice == "4":
+            log_menu("Analyze")
+            filename = input("Enter dataset filename: ")
+            analyze_file(filename)
 
-    elif choice == "2":
-        print("\nDecrypt Module Coming Soon")
-        write_log("Decrypt")
+        elif choice == "5":
+            log_menu("Exit")
+            print("Goodbye!")
+            break
 
-    elif choice == "3":
-        print("\nAttack Module Coming Soon")
-        write_log("Attack")
+        else:
+            print("Invalid choice!")
 
-    elif choice == "4":
-        filename = input("Enter filename from datasets folder: ")
-
-        path = os.path.join("datasets", filename)
-
-        analyze_file(path)
-
-        write_log("Analyze")
-
-    elif choice == "5":
-        write_log("Exit")
-        print("Goodbye.")
-        break
-
-    else:
-        print("Invalid choice")
+if __name__ == "__main__":
+    main()
