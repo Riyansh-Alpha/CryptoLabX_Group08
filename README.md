@@ -16,7 +16,7 @@ and an execution logging system.
 | Student ID     | Name     | Role (Week 1)                                      |
 |----------------|----------|----------------------------------------------------|
 | 2024UCP1319    | Riyansh  | Project structure, CLI, file analysis, datasets    |
-| 2024UCP1444    | —        | Logger module, package setup, README documentation |
+| 2024UCP1444    | AKASH       | Logger module, package setup, README documentation |
 
 ---
 
