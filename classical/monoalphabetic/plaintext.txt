@@ -1,0 +1,18 @@
+
+are mapped to a single ciphertext (making it impossible to unambiguously decrypt). Therefore, in some sense, the case of IMI IKIIC) is the "most efficient". We are now ready to state the theorem:
+
+THEOREM 2.8 (Shannon's theorem) Let (Gen, Enc, Dec) be an en- cryption scheme over a message space M for which M IKICI. The scheme is perfectly secret if and only if
+
+1. Every key k€ K is chosen with equal probability 1/K by algorithm Gen.
+
+2. For every m€ M and every e C, there exists a unique key k €X such that Enca (m) outputs c.
+
+PROOF The intuition behind the proof of this theorem is as follows. First, if a scheme fulfills item (2) then a given ciphertext c could be the result of encrypting any possible plaintext m (this holds because for every m there exists a key k mapping it to c). Combining this with the fact that exactly one key maps each m to c, and by item (1) each key is chosen with the same probability, perfect secrecy can be shown as in the case of the one-time pad. For the other direction, the intuition is that if MKC then there must be exactly one key mapping each m to each c. (Otherwise, either some m is not mapped to a given e contradicting perfect secrecy, or some mis mapped by more than one key to c, resulting in another m' not being mapped to e, again contradicting perfect secrecy.) Given this, it must hold that each key is chosen with equal probability or some plaintexts would be more likely than others, contradicting perfect secrecy. The formal proof follows.
+
+Let (Gen, Enc, Dec) be as in the theorem. For simplicity, we assume Enc is deterministic. We first prove that if (Gen, Enc, Dec) is perfectly secret, then items (1) and (2) hold. As in the proof of Theorem 2.7, it is not hard to see that for every me M and c e C, there exists at least one key ke K such that Enc() c. (Otherwise, Pr[Mm C0 PrMml.) For a fixed m, consider now the set (Encs(m))ack By what we have just said. (Enca (m))x 2 ICI (because for every c C there exists a &K such that Enca(m) c). In addition, we trivially have {Enca (m))ek! SICI. We conclude that
+
+|{Enc()}c|-|C|.
+
+Since KC, it follows that (Enc(m))ack=K]. This implies that there are no distinct keys ky,ka K with Enca, (m) Enca, (m). Since m was arbitrary, we see that for every m and e, there exists at most one key ke K such that Enca (m) c. Combining the above (ie., the existence of at least one key and at most one key), we obtain item (2). We proceed to show that for every k and M (mm) (recall, IM Then, we can label the keys k.,k so
+
+K, PK-1/K). Let n= |K Kn), and fix a ciphertext e. that for every i (1 ≤ i ≤n) it holds
