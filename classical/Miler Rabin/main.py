@@ -4,10 +4,6 @@ import sympy
 
 
 def miller_rabin(n: int, k: int = 40) -> bool:
-    """Performs the Miller-Rabin primality test k times.
-
-    Returns True if n is a probable prime, False if composite.
-    """
     if n <= 1:
         return False
     if n <= 3:
@@ -22,7 +18,7 @@ def miller_rabin(n: int, k: int = 40) -> bool:
         d //= 2
         s += 1
 
-    # Conduct k testing rounds
+    # Conduct k testing round
     for _ in range(k):
         a = random.randint(2, n - 2)
         x = pow(a, d, n)
@@ -44,7 +40,7 @@ def miller_rabin(n: int, k: int = 40) -> bool:
 
 
 def generate_candidate(bit_length: int = 512) -> int:
-    """Generates a random candidate integer of exact bit length.
+    """Generates a random candidate integer of exact bit len.
 
     Sets the Most Significant Bit (MSB) to 1 (ensuring bit length) and LSB to 1
     (ensuring odd parity).
