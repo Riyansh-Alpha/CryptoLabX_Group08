@@ -26,8 +26,11 @@ class AESCBCOracle:
         """
         Padding Oracle: Returns True if decryption yields valid PKCS#7 padding,
         False otherwise.
+        
+        
         """
-        self.query_count += 1
+        self.query_count = self.query_count +1
+        
         cipher = Cipher(algorithms.AES(self._key), modes.CBC(iv))
         decryptor = cipher.decryptor()
         try:
